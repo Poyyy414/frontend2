@@ -1,0 +1,98 @@
+/* Adjust the Navbar's layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0; /* Increase padding for a taller navbar */
+    height: 80px; /* Increase the height of the navbar */
+    position: static;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 0%;
+    position:sticky;
+}
+
+/* Logo styling */
+.navbar-logo {
+    height: 50px; /* Increase the height of the logo */
+    margin-right: 10px; /* Space between the logo and the text */
+}
+
+.navbar-text {
+    font-size: 2.5rem; /* Increase text size further */
+    font-weight: 700;
+    color: #000; /* Black text color for 'TIKTOK' */
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Make the search input thinner and longer */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px; /* Rounded corners for the search bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 80%; /* Make search bar take up 80% of its container */
+    max-width: 500px;
+    padding: 0px;
+    height:0px;
+}
+
+/* Search Input Styling */
+.search-input {
+    width: 100%;
+    padding: 12px 20px; /* Adjust padding for a bigger bar */
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+/* Search Button (Search Icon) Styling */
+.search-btn {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* Adjust spacing between the logo and the text in Navbar */
+.navbar-text.ms-2 {
+    margin-left: 20px;
+}
+
+/* Center the search input */
+.d-flex.mx-auto {
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    align-items: center;
+    flex-grow: 1; /* Take up remaining space */
+    position: relative;
+    left: 200px; /* Offset positioning for centering */
+}
+
+/* Video Styling */
+video {
+    border: none; /* Removes any border */
+    outline: none; /* Removes any focus outline */
+    box-shadow: none; /* Ensures no shadow effect */
+    background: transparent; /* Optional: Transparent background */
+}

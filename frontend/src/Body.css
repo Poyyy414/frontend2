@@ -1,0 +1,168 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .app-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f8f9fa;
+  }
+  
+  /* Adjust the sidebar height if there's a navbar at the top */
+  .sidebar {
+    width: 220px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    border-right: 3px solid #ddd;
+    position: fixed;
+    top: 80px; /* Adjust the top position if there's a navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    z-index: 10; /* Ensure sidebar is above other content */
+  }
+  
+  /* Hide logo inside the sidebar */
+  .sidebar .logo {
+    display: none;
+  }
+  
+  /* Sidebar Heading */
+  .sidebar h2 {
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.8;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .sidebar h2:hover {
+    color: #007bff;
+    background-color: #e6f0ff;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .logout-btn {
+    color: #d9534f;
+    background-color: #fdf5f5;
+    border: 1px solid #d9534f;
+    text-align: center;
+  }
+  
+  .logout-btn button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    color: #d9534f;
+  }
+  
+  .logout-btn button:hover {
+    background-color: #f5c6cb;
+    color: white;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 220px; /* Sidebar width */
+    margin-top: 50px; /* Add space for the navbar */
+    width: calc(100% - 220px);
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+  }
+  
+  /* Video Section */
+  .video-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+    margin-bottom: 20px; /* Add spacing between videos */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .video-container {
+    width: 100%;
+    max-width: 500px; /* Max width like TikTok */
+    height: 100%; /* Full height to fill the container */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video fits without distortion */
+  }
+  
+  .video-container:hover .video-controls {
+    display: flex; /* Show controls on hover */
+  }
+  
+  .video-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    gap: 20px;
+  }
+  
+  .control-icon {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .control-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  
+  /* Comment Section */
+  .comment-bar {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Disable scrollbar on the body */
+  body {
+    overflow: hidden;
+  }
+  
+  /* Optionally, if you want to prevent scrolling only for the main content area: */
+  .main-content {
+    overflow: hidden;
+  }
